@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{asset('img/HMTI.jpg')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{asset('img/icon-umb.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -11,7 +11,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset('img/user.png')}}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('img/USER.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -34,24 +34,42 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <i class="fas fa-rss-square nav-icon"></i>
+                  <i class="fas fa-check-double nav-icon"></i>
                   <p>Active Page</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="fas fa-align-left nav-icon"></i>
+                  <i class="fas fa-times-circle nav-icon"></i>
                   <p>Inactive Page</p>
+                </a>
+            </ul>
+          </li>      
+        
+          <!-- Menu Baru -->
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fab fa-blogger-b"></i>
+              <p>
+                Blog Page
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link ">
+                  <i class="fas fa-plus-square nav-icon"></i>
+                  <p>Add Blog</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="fas fa-align-left nav-icon"></i>
-                  <p>Inactive Page</p>
+                  <i class="fas fa-folder nav-icon"></i>
+                  <p>Data Blog</p>
                 </a>
               </li>
             </ul>
-          </li>
+          </li>      
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>

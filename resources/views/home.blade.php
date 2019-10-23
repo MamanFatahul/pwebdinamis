@@ -8,18 +8,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <head>
 <title>Belajar Program WEB DINAMIS </title>
-    @include('Templates.head') 
+    @include('Template.head') 
 </head>
 
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
 
   <!-- Navbar -->
-  @include('Templates.navbar')
+  @include('Template.navbar')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('Templates.sidebar-left')
+  @include('Template.sidebar-left')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -28,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Hello HAI</h1>
+            <h1 class="m-0 text-dark"> <marquee>Welcome to Web Dinamis</marquee></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -50,13 +50,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
-  @include('Templates.Footer')
+  @include('Template.Footer')
 </div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-  @include('Templates.script')
+  @include('Template.script')
 </body>
 </html>
