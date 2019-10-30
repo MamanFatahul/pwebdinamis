@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
 <head>
-<title> WEB DINAMIS </title>
+<title> Tambah Blog </title>
     @include('Template.head') 
 </head>
 
@@ -32,8 +32,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              
+              <li class="breadcrumb-item"><a href="{{('/')}}">Home</a></li>
+              <li class="breadcrumb-item active">Tambah Blog</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="content">
-      {{--Isi--}}
+      <h3 align="center"> Halaman Tambah Blog </h3>
     </div>
     <!-- /.content -->
   </div>
