@@ -43,12 +43,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="content">
-      <h3 align="center"> Halaman Data Blog </h3>
+        <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Bordered Table</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <thead>                  
+                          <tr>
+                            <th>Nama</th>
+                            <th colspan="3"><center>Aksi</center></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach ($varHuruf as $isinya)
+                            <tr>
+                             <td>{{$isinya}}</td>
+                            <td><a href="{{$isinya}}">
+                                 <i class="fas fa-eye">Lihat</i>
+                            </a></td>
+                            <td><a href="{{$isinya}}">
+                                    <i class="fas fa-edit">Edit</i>
+                            </a></td>
+                            <td><a href="{{$isinya}}">
+                                    <i class="fas fa-trash-alt">Hapus</i>
+                                </td>    
+                                </a>
+                                
+                            
+                            </tr>
+                             @endforeach
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer clearfix">
+                      <ul class="pagination pagination-sm m-0 float-right">
+                        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                      </ul>
+                    </div>
+                  </div>
+    
     </div>
+  </div>
+</div>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+  </div>
   <!-- Main Footer -->
   @include('Template.Footer')
 </div>
