@@ -11,7 +11,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('Template.head') 
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini"> 
 <div class="wrapper" id="app">
 
   <!-- Navbar -->
@@ -32,7 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{('/')}}">Home</a></li>
               
             </ol>
           </div><!-- /.col -->
@@ -43,7 +43,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="content">
-      {{--Isi--}}
+      <h3>Halaman Utama</h3>
+      <router-view></router-view>
     </div>
     <!-- /.content -->
   </div>

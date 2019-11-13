@@ -57,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <thead>                  
                           <tr>
                             <th>Nama</th>
-                            <th colspan="3"><center>Aksi</center></th>
+                            <th style="width:25%"><center>Aksi</center></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -65,18 +65,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @foreach ($varHuruf as $isinya)
                             <tr>
                              <td>{{$isinya}}</td>
-                            <td><a href="{{$isinya}}">
-                                 <i class="fas fa-eye">Lihat</i>
-                            </a></td>
-                            <td><a href="{{$isinya}}">
-                                    <i class="fas fa-edit">Edit</i>
-                            </a></td>
-                            <td><a href="{{$isinya}}">
-                                    <i class="fas fa-trash-alt">Hapus</i>
-                                </td>    
-                                </a>
-                                
-                            
+                            <td>
+                              <a href="{{$isinya}}">
+                                 <i class="fas fa-eye red">Lihat|</i>
+                              </a>
+
+                              <a href="{{$isinya}}">
+                                    <i class="fas fa-edit purple">Edit|</i>
+                              </a>
+
+                              <a href="{{$isinya}}">
+                                    <i class="fas fa-trash-alt green">Hapus</i>      
+                                </a>    
+                              </td>
                             </tr>
                              @endforeach
                         </tbody>
