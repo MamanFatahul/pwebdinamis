@@ -28,7 +28,7 @@
                               </a>
 
                               <a href="#">
-                                   &nbsp;&nbsp;<i class="fas fa-trash-alt red">Hapus</i>      
+                                &nbsp;&nbsp;&nbsp;<i class="fas fa-trash-alt red">Hapus</i>      
                                 </a>    
                               </td>
                             </tr>

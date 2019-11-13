@@ -12,8 +12,8 @@ let routes = [
    { path:'/blog-kategori', component: require('./components/Blog/Kategori.vue').default}
 ]
 
-
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
 
 const router = new VueRouter ({
     mode: 'history',

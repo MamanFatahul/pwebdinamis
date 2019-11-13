@@ -1898,7 +1898,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37482,7 +37481,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("a", { attrs: { href: "#" } }, [
-            _vm._v("\n                                 "),
+            _vm._v("\n                               "),
             _c("i", { staticClass: "fas fa-trash-alt red" }, [_vm._v("Hapus")])
           ])
         ])
@@ -37525,7 +37524,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "th",
-                    { staticStyle: { width: "30%" } },
+                    { staticStyle: { width: "25%" } },
                     [_c("center", [_vm._v("Aksi")])],
                     1
                   )

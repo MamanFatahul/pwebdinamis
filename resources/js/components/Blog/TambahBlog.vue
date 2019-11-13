@@ -10,7 +10,7 @@
                         <thead>                  
                           <tr>
                             <th>Nama</th>
-                            <th style="width:30%"><center>Aksi</center></th>
+                            <th style="width:25%"><center>Aksi</center></th>
                           </tr>
                         </thead>
                         <tbody>
