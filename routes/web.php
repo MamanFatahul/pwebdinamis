@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/tambah-blog', 'BlogController@tambahblog');
 
 Route::get('/data-blog', 'BlogController@index');
+
+Route::get('/Login-Admin', function () {
+    return view('Template.Masuk');
+});

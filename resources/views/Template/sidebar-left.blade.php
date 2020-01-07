@@ -51,11 +51,22 @@
                 </router-link>
               </li>
               <li class="nav-item">
-                <a href="{{url('/data-blog')}}" class="nav-link">
+                <router-link to="data-blog" class="nav-link ">
                   <i class="fas fa-folder nav-icon blue"></i>
                   <p>Data Blog</p>
+                </router-link>
+             <!--  <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-database nav-icon blue"></i>
+                  <p>Login</p>
                 </a>
-              </li>
+              </li> -->
+              <li class="nav-item">
+                <router-link to="blog-login" class="nav-link ">
+                  <i class="fas fa-sign-in-alt nav-icon blue"></i>
+                  <p>Login</p>
+                </router-link>
+              </li> 
             </ul>
           </li>      
           <li class="nav-item">
