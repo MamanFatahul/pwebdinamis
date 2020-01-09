@@ -30,7 +30,7 @@ class KategoriController extends Controller
             'namakategori' => 'required|string|max:30',
         ]);
 
-        return Kategori::create([
+        return kategori::create([
             'id' => $request['id'],
             'namakategori'  => $request['namakategori'],
         ]);
@@ -56,7 +56,8 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $kategori = kategori::findOrFail($id);
+        $kategori->update($request->all());
     }
 
     /**
@@ -67,6 +68,7 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kategori = kategori::findOrFail($id);
+        $kategori->delete();
     }
 }

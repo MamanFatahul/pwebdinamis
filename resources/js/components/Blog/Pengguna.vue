@@ -31,15 +31,12 @@
 
 
                             <td>
-                              <a href="#">
-                                 <i class="fas fa-eye">Lihat&nbsp;&nbsp;&nbsp;|</i>
-                              </a>
 
-                              <a href="#">
+                              <a href="#" @click="editData(items)" title="Edit Data">
                                   &nbsp;&nbsp;&nbsp;<i class="fas fa-edit green">Edit &nbsp;&nbsp;&nbsp;|</i>
                               </a>
 
-                              <a href="#">
+                              <a href="#" @click="deleteData(items.id)" title="Hapus Data">
                                 &nbsp;&nbsp;&nbsp;<i class="fas fa-trash-alt red">Hapus</i>      
                                 </a>    
                               </td>
@@ -144,6 +141,12 @@
            this.form.reset();
            $("#tambah").modal("show");
          },
+         editData(items){
+           this.editmode = true;
+           this.form.reset();
+           $("#tambah").modal("show");
+           this.form.fill(items);
+         },
          loadData() {
            axios.get("api/user").then(({ data }) => (this.users= data));
          },
@@ -162,7 +165,47 @@
         })
         .catch();
     } ,
+    updateData(){
+        this.form
+        .put("api/user/" + this.form.id)
+        .then(() => {
+          this.$Progress.start();
+          $("#tambah").modal("hide");
+          Toast.fire({
+            type: "success",
+            title: "Data Berhasil Terubah"
+          });
+          this.$Progress.finish();
+          Fire.$emit("refreshData");
+        })
+        .catch(() =>{
+          this.$Progress.fail();
+        });
       },
+        deleteData(id){
+        Swal.fire({
+          title: "Anda Yakin Ingin Menghapus Data ini ?",
+          text: "Klik Batal Untuk Membatalkan Penghapusan",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Hapus"
+        }).then(result=> {
+          if (result.value){
+            this.form
+            .delete("api/user/"+id)
+            .then(()=>{
+              Swal.fire("Terhapus", "Data Anda Sudah Terhapus", "success");
+              Fire.$emit("refreshData");
+            })
+            .catch(()=>{
+              Swal.fire("Gagal", "Data Gagal Terhapus", "warning");
+            });
+          }
+        });
+      }
+    },
        created() {
          this.loadData();
          Fire.$on("refreshData", () => {

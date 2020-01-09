@@ -33,6 +33,7 @@ class BlogController extends Controller
             'jbaca' => 'required|integer',
         ]);
 
+        
         return Blog::create([
             'id' => $request['id'],
             'kategori_id'  => $request['kategori_id'],
@@ -63,7 +64,8 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog = blog::findOrFail($id);
+        $blog->update($request->all());
     }
 
     /**
@@ -74,6 +76,7 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $blog = blog::findOrFail($id);
+        $blog->delete();
     }
 }
